@@ -61,6 +61,19 @@ body {
     font-size: 200%;
     color: #8892B0 !important;
 }
+#p2-intro {
+    width: 60%;
+}
+@media (min-width: 500px) and (max-width: 1200px){
+    #p2-intro {
+        width: 80%;
+    }
+}
+@media (max-width: 499px) {
+    #p2-intro {
+        width: 100%;
+    }
+}
 /******codding about me********/
 .about-me * {
     font-family: 'Montserrat', sans-serif;
@@ -159,9 +172,6 @@ body {
     }
    
 }
-
-
-
 /******codding Footer********/
 .footer-container * {
     font-family: 'Montserrat', sans-serif;
