@@ -35,6 +35,11 @@ body {
 .container a:hover {
     color: #64ffda;
 }
+@media (max-width: 576px) {
+    .resume-btn, #hello-btn {
+        box-shadow: 2px 4px 1px #64FFDA;
+    }
+}
 
  /*coding intro*/
  .hero * {
