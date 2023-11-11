@@ -172,6 +172,21 @@ body {
     }
    
 }
+/***********coding socials************/
+.social-container {
+    display: grid;
+    justify-items: center;
+    width: 5%;
+    row-gap: 30px;
+    grid-template: 1fr 1fr 1fr / 1fr;
+   
+    
+}
+.social-container img {
+    width: 30%;
+    object-fit: cover;
+    
+}
 /******codding Footer********/
 .footer-container * {
     font-family: 'Montserrat', sans-serif;
