@@ -173,24 +173,32 @@ body {
    
 }
 /***********coding socials************/
-.social-container {
-    display: grid;
-    position: fixed;
-        bottom: 50px;
-    justify-items: center;
-    width: 5%;
-    row-gap: 30px;
-    grid-template: 1fr 1fr 1fr / 1fr;
+@media (min-width: 1400px){
+    .social-container {
+        display: grid;
+        position: fixed;
+            bottom: 50px;
+        justify-items: center;
+        width: 5%;
+        row-gap: 30px;
+        grid-template: 1fr 1fr 1fr / 1fr;
     
-   
+    }
+    .social-container img {
+        width: 30%;
+        object-fit: cover;
+        
+    }
     
+}
+@media (max-width: 1400px) {
+    .social-container {
+        display: none;
+    }
 }
 
-.social-container img {
-    width: 30%;
-    object-fit: cover;
-    
-}
+
+
 /******codding Footer********/
 .footer-container * {
     font-family: 'Montserrat', sans-serif;

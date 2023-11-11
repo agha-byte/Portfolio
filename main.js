@@ -1,36 +1,42 @@
 // Adding event listeners to socials
-const totalSocials = document.querySelectorAll(".social-container > *").length;
-console.log(totalSocials);
-for (let i =0; i<totalSocials; i++){
-    document.querySelectorAll(".social-container > *")[i].addEventListener("mouseover", function(event){
-       setHoverImages(this.alt);
-        
+const totalSocials = document.querySelectorAll(".social-container > *");
+const fb = document.getElementById("fb");
+const insta = document.getElementById("insta");
+const lkdn = document.getElementById("lkdn");
+
+
+
+for (let i =0; i<totalSocials.length; i++){
+    totalSocials[i].addEventListener("mouseover", function(event){
+      
+        console.log(event.type)
+        setImages(this.alt, event.type)
     })
     document.querySelectorAll(".social-container > *")[i].addEventListener("mouseout", function(event){
-       setDefaultImages(this.alt)
+       setImages(this.alt, event.type);
         
     })
 }
 
-function setHoverImages (alt) {
+function setImages (alt, eventType) {
     if (alt == "facebook logo"){
-        document.getElementById("fb").setAttribute("src", "./assets/fbHover.png")
+        if (eventType == "mouseover"){
+            fb.setAttribute("src", "./assets/fbHover.png");
+        }else {
+            fb.setAttribute("src", "./assets/facebook.svg");
+        }
     }else if (alt == "instagram logo"){
-        document.getElementById("insta").setAttribute("src", "./assets/instaHover.png")
-
+        if (eventType =="mouseover"){
+            insta.setAttribute("src", "./assets/instaHover.png");
+        }else {
+            insta.setAttribute("src", "./assets/instagram.svg");
+        }
     }else {
-        document.getElementById("lkdn").setAttribute("src", "./assets/lkdnHover.png")
+        if (eventType == "mouseover"){
+            lkdn.setAttribute("src", "./assets/lkdnHover.png")
 
-    }
-}
-function setDefaultImages (alt) {
-    if (alt == "facebook logo"){
-        document.getElementById("fb").setAttribute("src", "./assets/facebook.svg")
-    }else if (alt == "instagram logo"){
-        document.getElementById("insta").setAttribute("src", "./assets/instagram.svg")
-
-    }else {
-        document.getElementById("lkdn").setAttribute("src", "./assets/linkedin.svg")
-
+        }else {
+            lkdn.setAttribute("src", "./assets/linkedin.svg")
+        }
     }
 }
