@@ -72,7 +72,27 @@ body {
 @media (max-width: 499px) {
     #p2-intro {
         width: 100%;
+       
     }
+}
+@media (max-width: 517px) { /*this media becomes active when 
+    screensize <=517px,   */
+    .hero > h1 {
+        font-size: 300%
+    }
+    .hero > h2 {
+        font-size: 150%;
+       
+    }
+}
+@media (max-width: 401px) {/*this media is created to make 
+    h2 tag to appear more appealing as  h2 tag shifts some words
+    down to fit the content so we will decrease font size at this 
+    breakpoint*/
+    .hero > h2 {
+        font-size: 137%
+    }
+
 }
 /******codding about me********/
 .about-me * {
